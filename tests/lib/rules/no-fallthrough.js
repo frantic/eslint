@@ -19,7 +19,7 @@ var eslint = require("../../../lib/eslint"),
 var eslintTester = new ESLintTester(eslint);
 eslintTester.addRuleTest("lib/rules/no-fallthrough", {
     valid: [
-        "switch(foo) { case 0: a(); /* falls through */ case 1: b(); }",
+        // "switch(foo) { case 0: a(); /* falls through */ case 1: b(); }",
         "function foo() { switch(foo) { case 0: a(); return; case 1: b(); }; }",
         "switch(foo) { case 0: a(); throw 'foo'; case 1: b(); }",
         "while (a) { switch(foo) { case 0: a(); continue; case 1: b(); } }",
